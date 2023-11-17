@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -29,6 +30,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -89,26 +91,32 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 20.0,
               ),
-              InkWell(
-                onTap: () => movetoHome(context),
-                child: AnimatedContainer(
-                  duration: const Duration(seconds: 1),
-                  width: changeButton ? 50 : 150,
-                  height: 50,
-                  alignment: Alignment.center,
-                  // color: Colors.blue,
-                  child: changeButton
-                      ? Icon(
-                          Icons.done,
-                          color: Colors.white,
-                        )
-                      : Text(
-                          "Login",
-                          style: TextStyle(color: Colors.white, fontSize: 22.0),
-                        ),
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(changeButton ? 50 : 8),
+              Material(
+                color: context.theme.primaryColor,
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                child: InkWell(
+                  onTap: () => movetoHome(context),
+                  child: AnimatedContainer(
+                    duration: const Duration(seconds: 1),
+                    width: changeButton ? 50 : 150,
+                    height: 50,
+                    alignment: Alignment.center,
+                    // color: Colors.blue,
+                    child: changeButton
+                        ? Icon(
+                            Icons.done,
+                            color: context.primaryColor,
+                          )
+                        : Text(
+                            "Login",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 22.0),
+                          ),
+                    decoration: BoxDecoration(
+                      // color: Colors.blue,
+                      borderRadius:
+                          BorderRadius.circular(changeButton ? 50 : 8),
+                    ),
                   ),
                 ),
               ),

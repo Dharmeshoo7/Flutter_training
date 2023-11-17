@@ -36,7 +36,7 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return VxBox(
-        child: Row(
+            child: Row(
       children: [
         Hero(
           tag: Key(catalog.id.toString()),
@@ -64,15 +64,21 @@ class CatalogItem extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                          MyTheme.darkBluishColor,
+                          context.primaryColor,
                         ),
                         shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Buy".text.make())
+                    child: "Add to Cart".text.make())
               ],
             ).pOnly(right: 8)
           ],
         ))
       ],
-    )).white.roundedSM.square(150).make().py12().w32(context);
+    ))
+        .color(context.cardColor)
+        .roundedSM
+        .square(150)
+        .make()
+        .py12()
+        .w32(context);
   }
 }

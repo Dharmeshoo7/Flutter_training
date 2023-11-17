@@ -11,13 +11,16 @@ class HomeDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var s =
+        "Hello this is testing first flutter app with Listview And Image Shared Animations and Pass the " +
+            "data to Next Page using MaterialPageRoute with Velocity X Usage";
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       appBar: AppBar(
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: Colors.transparent,
       ),
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -27,11 +30,11 @@ class HomeDetailPage extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                          MyTheme.darkBluishColor,
+                          context.primaryColor,
                         ),
                         shape: MaterialStateProperty.all(StadiumBorder())),
-                    child: "Buy".text.make())
-                .wh(100, 40)
+                    child: "Add to Cart".text.make())
+                .wh(130, 40)
           ],
         ).p24(),
       ),
@@ -49,18 +52,19 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 child: Column(
                   children: [
                     catalog.name.text.xl4
                         .color(MyTheme.darkBluishColor)
                         .bold
                         .make(),
-                    catalog.desc.text.xl
+                    catalog.desc.text.xl2
                         .maxLines(2)
                         .textStyle(context.captionStyle)
                         .make(),
                     10.heightBox,
+                    s.text.textStyle(context.captionStyle).bold.xl2.make(),
                   ],
                 ).p32(),
               ),
