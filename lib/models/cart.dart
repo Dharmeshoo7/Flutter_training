@@ -1,8 +1,14 @@
-import 'dart:ffi';
-
 import 'package:flutter_training/models/catalog.dart';
 
 class CartModel {
+
+  // Singleton for only one time object created and used every times
+  static final cartModel = CartModel._internal();
+
+  CartModel._internal();
+
+  factory CartModel() => cartModel;
+
   // catalog list
   late CatalogModel _catalog;
 
@@ -18,18 +24,17 @@ class CartModel {
   }
 
   // Get items in the cart
-  List<Item>? get items => _itemIds.map((id) => _catalog.getById(id)).toList();
+  List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
 
-  num get totalPrice =>
-      items!.fold(0, (total, current) => total + current.price);
+  num get TotalPrice =>
+      items.fold(0, (total, current) => total + current.price);
 
-  // Add items
-
+// add items
   void add(Item item) {
     _itemIds.add(item.id);
   }
 
-  // Remove items
+//  remove items
   void remove(Item item) {
     _itemIds.remove(item.id);
   }
