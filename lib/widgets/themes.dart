@@ -8,6 +8,7 @@ class MyTheme {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
+        focusColor: Colors.black,
         canvasColor: creamColor,
         primaryColor: darkBluishColor,
         floatingActionButtonTheme:
@@ -32,6 +33,7 @@ class MyTheme {
         brightness: Brightness.dark,
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.black,
+        focusColor: Colors.white,
         canvasColor: darkCreamColor,
         primaryColor: lightBluishColor,
         floatingActionButtonTheme:
