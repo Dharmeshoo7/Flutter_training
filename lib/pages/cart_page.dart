@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_training/models/cart.dart';
-import 'package:flutter_training/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartPage extends StatelessWidget {
@@ -68,17 +66,24 @@ class _CartListState extends State<_CartList> {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: _cart.items.length,
-        itemBuilder: (context, index) => ListTile(
-              leading: Icon(Icons.done),
-              trailing: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.remove_circle_outline),
-              ),
-              title: _cart.items[index].name.text
-                  .color(context.theme.highlightColor)
-                  .make(),
-            ));
+    return _cart.items.isEmpty
+        ? "Cart is Empty".text.xl3.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+                  leading: Icon(Icons.done),
+                  trailing: IconButton(
+                    onPressed: () {
+                      _cart.remove(_cart.items[index]);
+                      setState(() {
+                        
+                      });
+                    },
+                    icon: Icon(Icons.remove_circle_outline),
+                  ),
+                  title: _cart.items[index].name.text
+                      .color(context.theme.highlightColor)
+                      .make(),
+                ));
   }
 }

@@ -3,9 +3,9 @@ import 'package:flutter_training/models/catalog.dart';
 class CartModel {
 
   // Singleton for only one time object created and used every times
-  static final cartModel = CartModel._internal();
+  static final cartModel = CartModel._singleton();
 
-  CartModel._internal();
+  CartModel._singleton();
 
   factory CartModel() => cartModel;
 
@@ -28,6 +28,9 @@ class CartModel {
 
   num get TotalPrice =>
       items.fold(0, (total, current) => total + current.price);
+
+       num get TotalMPrice =>
+      items.fold(0, (total, current) => total - current.price);
 
 // add items
   void add(Item item) {

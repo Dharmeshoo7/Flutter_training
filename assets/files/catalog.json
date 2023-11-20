@@ -12,7 +12,7 @@
       "id": 2,
       "name": "LinkedIn 2",
       "desc": "Our query language lets you read data in XML and JSON at the granularity and aggregation that you choose.",
-      "price": 500,
+      "price": 450,
       "color": "#33505a",
       "image": "https://cdn-icons-png.flaticon.com/512/709/709325.png"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "LinkedIn 3",
       "desc": "the interactions and relationships between them. Our query language lets you read data in XML and JSON at the granularity and aggregation that you choose.",
-      "price": 500,
+      "price": 100,
       "color": "#33505a",
       "image": "https://cdn-icons-png.flaticon.com/512/709/709325.png"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "LinkedIn 4",
       "desc": "Our query language lets you read data in XML and JSON at the granularity and aggregation that you choose.",
-      "price": 500,
+      "price": 800,
       "color": "#33505a",
       "image": "https://cdn-icons-png.flaticon.com/512/709/709325.png"
     },
@@ -36,7 +36,23 @@
       "id": 5,
       "name": "LinkedIn 5",
       "desc": "Use OAuth 1.0a to authorize users and begin making REST API calls using any programming language.",
-      "price": 500,
+      "price": 200,
+      "color": "#33505a",
+      "image": "https://cdn-icons-png.flaticon.com/512/709/709325.png"
+    },
+    {
+      "id": 6,
+      "name": "LinkedIn 6",
+      "desc": "begin making REST API calls using any programming language.",
+      "price": 300,
+      "color": "#33505a",
+      "image": "https://cdn-icons-png.flaticon.com/512/709/709325.png"
+    },
+    {
+      "id": 7,
+      "name": "LinkedIn 7",
+      "desc": "REST API calls using any programming language.",
+      "price": 600,
       "color": "#33505a",
       "image": "https://cdn-icons-png.flaticon.com/512/709/709325.png"
     }
