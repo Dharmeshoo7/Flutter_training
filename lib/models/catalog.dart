@@ -2,11 +2,11 @@ import 'dart:convert';
 
 class CatalogModel {
 // Singleton for only one time object created and used every times
-  static final catModel = CatalogModel._singleton();
+  // static final catModel = CatalogModel._singleton();
 
-  CatalogModel._singleton();
+  // CatalogModel._singleton();
 
-  factory CatalogModel() => catModel;
+  // factory CatalogModel() => catModel;
 
   static List<Item>? items;
 

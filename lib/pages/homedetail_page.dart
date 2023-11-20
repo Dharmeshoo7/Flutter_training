@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/main.dart';
 import 'package:flutter_training/models/catalog.dart';
 import 'package:flutter_training/widgets/home_widgets/add_to_cart.dart';
 import 'package:flutter_training/widgets/themes.dart';
